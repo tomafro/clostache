@@ -170,7 +170,7 @@
 (defn- find-section-end-tag
   "Find the matching end tag for a section at the specified level,
    starting to search at index."
-  [^String template ^long index ^long level]
+  [^String template ^Long index ^Long level]
   (let [next-start (find-section-start-tag template index)
         next-end (.indexOf ^String template "{{/" index)]
     (if (= next-end -1)
